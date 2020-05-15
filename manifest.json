@@ -9,5 +9,9 @@
     "css": ["styles.css"],
     "js": ["content.js"],
     "matches": ["https://lichess.org/*"]
-  }]
+  }],
+
+  "icons": { 
+    "128": "icon128.png" 
+  }
 }
