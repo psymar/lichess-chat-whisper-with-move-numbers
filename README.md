@@ -1,5 +1,5 @@
-== Lichess.org chat and whisper with move numbers ==
-=== Send chat messages or whisper to spectators room with move numbers ===
+# Lichess.org chat and whisper with move numbers
+## Send chat messages or whisper to spectators room with move numbers
 
 Version 2020-05-15 - Timothy Ha, https://lichess.org/@/timothyha
 
