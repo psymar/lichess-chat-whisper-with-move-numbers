@@ -11,6 +11,13 @@
     "matches": ["https://lichess.org/*"]
   }],
 
+  "permissions": [ "storage" ],
+  
+  "options_ui": {
+    "page": "options.html",
+    "open_in_tab": false
+  },
+
   "icons": { 
     "128": "icon128.png" 
   }
