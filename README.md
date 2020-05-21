@@ -4,11 +4,16 @@
 Timothy Ha, https://lichess.org/@/timothyha
 
 Versions:
+
 2020-05-15 - initial release
+
 2020-05-21 - options box added, can now choose
-  [x] turn on formatting
-  [x] whispers and chat (otherwise, only whispers)
-  [x] numbers in front of text
+
+[x] turn on formatting
+
+[x] whispers and chat (otherwise, only whispers)
+
+[x] numbers in front of text
 
 To install this extension manually (while waiting for Google's approval) please do the following:
 
