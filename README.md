@@ -14,12 +14,10 @@ Versions:
 
 2020-05-15 - initial release
 
-2020-05-21 - options box added, can now choose
+2020-05-21 - options box added, can now choose (see https://www.dropbox.com/s/6ybd9x4cw4x9qhc/Screenshot%202020-05-21%2023.16.17.png?dl=0)
 
 [x] turn on formatting
-
 [x] whispers and chat (otherwise, only whispers)
-
 [x] numbers in front of text
 
 
