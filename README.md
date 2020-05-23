@@ -1,7 +1,9 @@
 # Lichess.org chat and whisper with move numbers
 ## Send chat messages or whisper to spectators room with move numbers
 
-To install this extension manually (while waiting for Google's approval) please do the following:
+Google Chrome webstore https://chrome.google.com/webstore/detail/lichessorg-chatwhisper-wi/gljgfgfejfcopcjhaienfhbmcpopbhhp
+
+To install this extension manually (while waiting for Google's approval when code changes) please do the following:
 
 1) download the .zip
 2) unpack the .zip as a folder
