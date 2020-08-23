@@ -1,8 +1,12 @@
 // we set a timer because Lichess takes a while to load all DOM elements
 
+CHAT_ELEM = "#main-wrap > main > aside > section > div.mchat__content.discussion > input";
+//MOVE_ELEM = "#main-wrap > main > div.round__app.variant-standard > div.rmoves > div.moves > index";
+MOVE_ELEM = "#main-wrap > main > div.round__app.variant-standard > div.rmoves > div.col1-moves > bp0 > i5z";
+
 function setchatbox() {
 
-  var chatbox = document.querySelector("#main-wrap > main > aside > section > div.mchat__content.discussion > input");
+  var chatbox = document.querySelector(CHAT_ELEM);
   
   if( chatbox == undefined ) {
     return;
@@ -26,7 +30,7 @@ function setchatbox() {
 
     if( !ison ) return;
 
-    var movenum = document.querySelectorAll("#main-wrap > main > div.round__app.variant-standard > div.rmoves > div.moves > index").length;
+    var movenum = document.querySelectorAll(MOVE_ELEM).length;
     if( (movenum == undefined) || (movenum < 1) ) return;
     
     if( chatbox.value.substring(0,2) == "/w" )
