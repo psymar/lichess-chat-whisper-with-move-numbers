@@ -22,4 +22,4 @@ Versions:
 [x] whispers and chat (otherwise, only whispers)
 [x] numbers in front of text
 
-
+2020-08-23 - Lichess changed the DOM path to move numbers, adapted code
