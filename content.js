@@ -1,4 +1,4 @@
-// this path work only in an ongoing game, which is neat, as later on we don't need move number prefixes
+// this path works only in an ongoing game, which is neat, as later on we don't need move number prefixes
 CHAT_ELEM = "#main-wrap > main > aside > section > div.mchat__content.discussion > input";
 
 function setchatbox() {
