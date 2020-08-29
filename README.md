@@ -14,7 +14,7 @@ Author: Timothy Ha, https://lichess.org/@/timothyha
 
 Versions:
 
-2020-08-23 - Lichess changed the DOM path to move numbers, adapted code
+2020-08-29 - Lichess changed the DOM path to move numbers, adapted code for that
 
 2020-05-21 - options box added, can now choose (see https://www.dropbox.com/s/6ybd9x4cw4x9qhc/Screenshot%202020-05-21%2023.16.17.png?dl=0)
 
