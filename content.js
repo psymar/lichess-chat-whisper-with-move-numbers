@@ -1,8 +1,5 @@
-// we set a timer because Lichess takes a while to load all DOM elements
-
+// this path work only in an ongoing game, which is neat, as later on we don't need move number prefixes
 CHAT_ELEM = "#main-wrap > main > aside > section > div.mchat__content.discussion > input";
-//MOVE_ELEM = "#main-wrap > main > div.round__app.variant-standard > div.rmoves > div.moves > index";
-MOVE_ELEM = "#main-wrap > main > div.round__app.variant-standard > div.rmoves > div.col1-moves > bp0 > i5z";
 
 function setchatbox() {
 
@@ -30,9 +27,9 @@ function setchatbox() {
 
     if( !ison ) return;
 
-    var movenum = document.querySelectorAll(MOVE_ELEM).length;
+    var movenum = document.getElementsByTagName("i5z").length;
     if( (movenum == undefined) || (movenum < 1) ) return;
-    
+   
     if( chatbox.value.substring(0,2) == "/w" )
       chatbox.value = isfront ? ('/w (' + movenum + ')' + chatbox.value.substring(2,200)) : ('/w' + chatbox.value.substring(2,200) + ' (' + movenum + ')'); 
     else if ( isboth )
@@ -42,7 +39,5 @@ function setchatbox() {
   clearTimeout(chatboxtimer);
 }
 
+// we set a timer because Lichess takes a while to load all DOM elements
 var chatboxtimer = setTimeout(setchatbox, 1000);
-
-// todo - Chess 960 move number is at #main-wrap > main > div.round__app.variant-chess960 > div.rmoves > div.moves > index
-// 
