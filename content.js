@@ -13,7 +13,14 @@ function setchatbox() {
   var isboth  = true;
   var isfront = true;
 
-  chrome.storage.sync.get({
+  var client;
+  if( IsChrome() ){
+      client= chrome;        
+  } else if( IsFirefox() ) {
+      client = browser;       
+  }
+
+  client.storage.sync.get({
     ison: true,
     isboth: true,
     isfront: true
@@ -30,7 +37,7 @@ function setchatbox() {
     var movenum = document.getElementsByTagName("i5z").length;
     if( (movenum == undefined) || (movenum < 1) ) return;
    
-    if( chatbox.value.substring(0,2) == "/w" )
+    if( (chatbox.value.substring(0,2) == "/w") || (chatbox.value.substring(0,2) == "/W") )
       chatbox.value = isfront ? ('/w (' + movenum + ')' + chatbox.value.substring(2,200)) : ('/w' + chatbox.value.substring(2,200) + ' (' + movenum + ')'); 
     else if ( isboth )
       chatbox.value = isfront ? ('(' + movenum + ') ' + chatbox.value) : (chatbox.value + ' (' + movenum + ')'); 
