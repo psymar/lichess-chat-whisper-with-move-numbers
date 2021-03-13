@@ -13,14 +13,7 @@ function setchatbox() {
   var isboth  = true;
   var isfront = true;
 
-  var client;
-  if( IsChrome() ){
-      client= chrome;        
-  } else if( IsFirefox() ) {
-      client = browser;       
-  }
-
-  client.storage.sync.get({
+  chrome.storage.sync.get({
     ison: true,
     isboth: true,
     isfront: true
