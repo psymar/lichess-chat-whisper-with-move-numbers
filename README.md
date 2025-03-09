@@ -1,3 +1,5 @@
+PRIVACY POLICY: this extension doesn't collect any data from you.
+
 # Lichess.org chat and whisper with move numbers
 ## Send chat messages or whisper to spectators room with move numbers
 
