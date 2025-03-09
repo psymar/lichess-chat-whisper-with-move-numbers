@@ -2,7 +2,7 @@
   "manifest_version": 3,
 
   "name": "Lichess.org chat/whisper with move numbers",
-  "version": "2021.03.14",
+  "version": "2025.03.10",
   "description": "Send chat messages or whisper to spectators room with move numbers",
 
   "content_scripts": [{
