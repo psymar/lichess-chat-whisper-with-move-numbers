@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
 
-  "name": "Lichess.org chat/whisper with move numbers and autowhisper",
-  "version": "2025.09.13",
+  "name": "chat move nums+autowhisper for lichess.org",
+  "version": "2025.9.13",
   "description": "Send chat messages or whisper to spectators room with move numbers, also also can convert chats to whispers by default during games",
 
   "content_scripts": [{
@@ -22,9 +22,12 @@
     "128": "icon128.png" 
   },
 
-  "applications": {
+  "browser_specific_settings": {
     "gecko": {
-      "id": "@Lichess_Chat_Whisper_Move_Numbers_and_autowhisper"
+      "id": "@Lichess_Chat_Whisper_Move_Numbers_and_autowhisper",
+      "data_collection_permissions": {
+        "required": ["none"]
+      },
     }
   }
 }
