@@ -12,25 +12,30 @@ function setchatbox() {
   var ison    = true;
   var isboth  = true;
   var isfront = true;
+  var whisperdefault = true;
 
   chrome.storage.sync.get({
     ison: true,
     isboth: true,
-    isfront: true
+    isfront: true,
+	whisperdefault: true
   }, function(items) {
     ison    = items.ison;
     isboth  = items.isboth;
     isfront = items.isfront;
+	whisperdefault = items.whisperdefault;
   });
 
   chatbox.onchange = function () { 
 
+    if( whisperdefault && (chatbox.value.substring(0,2) != "/w") && (chatbox.value.substring(0,2) != "/W") && (chatbox.value.substring(0,2) != "/t") (chatbox.value.substring(0,2) != "/T")
+		chatbox.value = '/w ' + chatbox.value;
     if( !ison ) return;
 
     var movenum = document.getElementsByTagName("i5z").length;
     if( (movenum == undefined) || (movenum < 1) ) return;
-   
-    if( (chatbox.value.substring(0,2) == "/w") || (chatbox.value.substring(0,2) == "/W") )
+
+	if( (chatbox.value.substring(0,2) == "/w") || (chatbox.value.substring(0,2) == "/W")
       chatbox.value = isfront ? ('/w (' + movenum + ')' + chatbox.value.substring(2,200)) : ('/w' + chatbox.value.substring(2,200) + ' (' + movenum + ')'); 
     else if ( isboth )
       chatbox.value = isfront ? ('(' + movenum + ') ' + chatbox.value) : (chatbox.value + ' (' + movenum + ')'); 

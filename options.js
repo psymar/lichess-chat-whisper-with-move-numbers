@@ -4,11 +4,13 @@ function save_options() {
     var ison    = document.getElementById('ison').checked;
     var isboth  = document.getElementById('isboth').checked;
     var isfront = document.getElementById('isfront').checked;
+	var whisperdefault = document.getElementById('whisperdefault').checked;
   
     chrome.storage.sync.set({
       ison: ison,
       isboth: isboth,
-      isfront: isfront
+      isfront: isfront,
+	  whisperdefault: whisperdefault
     }, function() {
       // Update status to let user know options were saved.
       var status = document.getElementById('status');
@@ -25,11 +27,13 @@ function save_options() {
     chrome.storage.sync.get({
       ison: true,
       isboth: true,
-      isfront: true
+	  isfront: true,
+      whisperdefault: true
     }, function(items) {
       document.getElementById('ison').checked    = items.ison;
       document.getElementById('isboth').checked  = items.isboth;
       document.getElementById('isfront').checked = items.isfront;
+	  document.getElementById('whisperdefault').checked = items.whisperdefault;
     });
   }
   
