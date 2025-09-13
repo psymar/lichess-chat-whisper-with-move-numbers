@@ -29,8 +29,9 @@ function setchatbox() {
   chatbox.onchange = function () { 
 	var movenum = document.getElementsByTagName("i5z").length;
 	if( (movenum == undefined) || (movenum < 1) ) return;
-	
-    if( whisperdefault && (chatbox.value.substring(0,2) != "/w") && (chatbox.value.substring(0,2) != "/W") && (chatbox.value.substring(0,2) != "/t") && (chatbox.value.substring(0,2) != "/T") )
+	if( (chatbox.value.substring(0,2) == "/t") || (chatbox.value.substring(0,2) == "/T") )
+		chatbox.value=chatbox.value.substring(2,200);
+    else if( whisperdefault && (chatbox.value.substring(0,2) != "/w") && (chatbox.value.substring(0,2) != "/W"))
 		chatbox.value = '/w ' + chatbox.value;
     if( ison ) {
 	  if( (chatbox.value.substring(0,2) == "/w") || (chatbox.value.substring(0,2) == "/W"))
@@ -44,4 +45,4 @@ function setchatbox() {
 }
 
 // we set a timer because Lichess takes a while to load all DOM elements
-var chatboxtimer = setTimeout(setchatbox, 1000);
+var chatboxtimer = setTimeout(setchatbox, 2000);
