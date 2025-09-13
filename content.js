@@ -14,7 +14,7 @@ function setchatbox() {
   var isfront = true;
   var whisperdefault = true;
 
-  chrome.storage.sync.get({
+  chrome.storage.local.get({
     ison: true,
     isboth: true,
     isfront: true,
@@ -27,18 +27,17 @@ function setchatbox() {
   });
 
   chatbox.onchange = function () { 
-
-    if( whisperdefault && (chatbox.value.substring(0,2) != "/w") && (chatbox.value.substring(0,2) != "/W") && (chatbox.value.substring(0,2) != "/t") (chatbox.value.substring(0,2) != "/T")
+	var movenum = document.getElementsByTagName("i5z").length;
+	if( (movenum == undefined) || (movenum < 1) ) return;
+	
+    if( whisperdefault && (chatbox.value.substring(0,2) != "/w") && (chatbox.value.substring(0,2) != "/W") && (chatbox.value.substring(0,2) != "/t") && (chatbox.value.substring(0,2) != "/T") )
 		chatbox.value = '/w ' + chatbox.value;
-    if( !ison ) return;
-
-    var movenum = document.getElementsByTagName("i5z").length;
-    if( (movenum == undefined) || (movenum < 1) ) return;
-
-	if( (chatbox.value.substring(0,2) == "/w") || (chatbox.value.substring(0,2) == "/W")
-      chatbox.value = isfront ? ('/w (' + movenum + ')' + chatbox.value.substring(2,200)) : ('/w' + chatbox.value.substring(2,200) + ' (' + movenum + ')'); 
-    else if ( isboth )
-      chatbox.value = isfront ? ('(' + movenum + ') ' + chatbox.value) : (chatbox.value + ' (' + movenum + ')'); 
+    if( ison ) {
+	  if( (chatbox.value.substring(0,2) == "/w") || (chatbox.value.substring(0,2) == "/W"))
+	    chatbox.value = isfront ? ('/w (' + movenum + ')' + chatbox.value.substring(2,200)) : ('/w' + chatbox.value.substring(2,200) + ' (' + movenum + ')'); 
+	  else if ( isboth )
+		chatbox.value = isfront ? ('(' + movenum + ') ' + chatbox.value) : (chatbox.value + ' (' + movenum + ')'); 
+	}
   };
 
   clearTimeout(chatboxtimer);
